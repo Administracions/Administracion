@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../login administrador/lgadmin.css/estilo.css">
         <link rel="stylesheet" href="../login administrador/lgadmin.css/menu.css">
         <link rel="stylesheet" href="../login administrador/lgadmin.css/master.css">
+        <script src="../../Interfaces/login empleado/js/loginAdmin.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -19,6 +20,12 @@
                 </nav>
             </div>
     </header>
+ <div>
+   <p>jdsijdsaidasjiasdjdiaodjasdio</p>
+<h3 id="UsuarioCorrecto" 
+style="text-align: center;font-size:x-large; font-family: fantasy;left:50 em;color:rgb(255, 255, 255);" >   </h3>
+ </div>
+
         <br>
         <br>
         <br>
@@ -26,17 +33,17 @@
     <div class="login-box">
       <img src="../img/long.png" class="avatar" alt="Avatar Image">
         <br>
-      <form action="validar.php" method="post">
+      <form  method="post" id="LoginAdmin"> 
       <h2>Iniciar Sesión</h2>
         <!-- USERNAME INPUT -->
        <label for="username">Usuario</label>
-        <input type="text" name="usuario"placeholder="Ingrese Usuario">
+        <input id="userAdmin" type="text" name="usuario"placeholder="Ingrese Usuario" required>
         <!-- PASSWORD INPUT -->
         <label for="pass">Contraseña</label>
-        <input type="password" name="pass" placeholder="Ingrese Contraseña">
+        <input  id="passAdmin" type="password" name="pass" placeholder="Ingrese Contraseña" required>
           
         <input type="submit" value="Aceptar">
-        <center><a href="#">¿Perdiste tu contraseña?</a><br></center>
+        <center><a href="C:\Users\PC\Documents\interfaces\Administracion\Interfaces\recuppassadmin.html">¿Perdiste tu contraseña?</a><br></center>
       </form>
     </div>   
     </body>
