@@ -30,9 +30,10 @@
         </div>
     </header>
     <br>
-        <div class="cod-empleado">
+   
+        <div class="cod-empleado" id="RegistrarHorario">
             <label for="cod-empleado">Código empleado</label>
-            <input type="text" name="CodEmpleado" placeholder="Ingrese el código">
+            <input id="codigoempleado" type="text" name="CodEmpleado" placeholder="Ingrese el código" required>
             </div>
             <br>
     <div class="clockdate">
@@ -40,9 +41,9 @@
         <span id="date"></span>
     </div>
     <br>
-    <div class="accion" >
-        <input type="submit" value="Registrar Entrada">
-        <input type="submit" value="Registrar Salida">
+    <div id="RegistroHorarios" class="accion" >
+        <input id="RegistroEntrada" type="submit" value="RegistrarEntrada" onclick="gettoday()">
+        <input id="RegistroSalida" type="submit" value="Registrar Salida" onclick="gettodaySalida()">
         </div>
-</body>
+    
 </html>
