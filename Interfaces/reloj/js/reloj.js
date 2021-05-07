@@ -26,16 +26,18 @@ function gettodaySalida(){
     minutes = today.getMinutes(),
     date = today.getDate(),
     year = today.getFullYear(),
-    day = today.getDay(s),
+    day = today.getDay(),
     month = today.getMonth(),
     seconds = today.getSeconds();
     hours = checkTime(hours);
     minutes = checkTime(minutes);
+   var m = month +1;
+   var d = day+2;
     console.log(year);
-    console.log(month);
-    console.log(day); 
+    console.log(m);
+    console.log(d); 
     
-  //  JSONSalida(year,month,day,hours,minutes,seconds);
+   JSONSalida(year,m,d,hours,minutes,seconds);
 
     return false;
 }
@@ -113,6 +115,7 @@ function JSONSalida(year,mouth,day,hour,minute,second){
 const RegistroSalida = "http://localhost:8082/Administracion/Cabanas/RegistrosEntrada/Salida";
 let idEmpleado = document.getElementById('codigoempleado').value;
 IsImptyChechk(idEmpleado);
+
 
 let JSONSalida={    
         id_empleado: idEmpleado,
