@@ -16,7 +16,7 @@ return false;
 
 
 function JSONForm(name, passwords){
-  const urllog = "http://localhost:8082/Administracion/Cabanas/login/loginEmpleados";
+ const urllog = "http://localhost:8082/Administracion/Cabanas/login/loginEmpleados";
 let JSONs = {
   user: name,
   password: passwords
@@ -32,11 +32,12 @@ method:"POST",
 body:JSON.stringify(JSONs)
 ,
 cache: "no-cache"
-}).then(res => (res.text()))
+}).then(res => (res.text())) //Redirreccione al panel. redireccionar window JS
 .then(res => (console.log(res)))
-.catch(error => (console.log(error)))
+.catch(error => (console.log(error))) // INNER HTML  USUARIO O CONTRASEÑA INCORRECTOS. Document. INNERHTML 
 
 }
+
 
 
 

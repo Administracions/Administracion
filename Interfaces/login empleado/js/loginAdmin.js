@@ -30,8 +30,8 @@ window.addEventListener('load', function(e){
     body:JSON.stringify(JSONs)
     ,
     cache: "no-cache"
-    }).then(res => (res.text())
+    }).then(res => (res.text()) //Redirreccione al panel. redireccionar window JS
     .then(res => (console.log(res))))
-    .catch(error => (console.log(error)))
+    .catch(error => (console.log(error))) // INNER HTML  USUARIO O CONTRASEÑA INCORRECTOS. Document. INNERHTML 
     
     }

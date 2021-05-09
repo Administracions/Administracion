@@ -31,11 +31,11 @@ function gettodaySalida(){
     seconds = today.getSeconds();
     hours = checkTime(hours);
     minutes = checkTime(minutes);
-   var m = month +1;
-   var d = day+2;
+   var mes = month + 1;
+   var dias = day+2;
     console.log(year);
-    console.log(m);
-    console.log(d); 
+    console.log(mes);
+    console.log(dias); 
     
    JSONSalida(year,m,d,hours,minutes,seconds);
 
@@ -107,9 +107,9 @@ fetch(RegistroEntrada, {
   method:"POST",
   cache:"no-cache",
   body: JSON.stringify(JsonEntrada)
-}).then(res => res.text())
-.then(res => console.log(res))
-.catch(err => console.log("Error"));
+}).then(res => res.text()) 
+.then(res => console.log(res)) //Muestre letrero Registrado exitosamente. Redireccione al index 
+.catch(err => console.log("Error")); //Favor de verificar su idEmpleado inner html 
 }
 function JSONSalida(year,mouth,day,hour,minute,second){
 const RegistroSalida = "http://localhost:8082/Administracion/Cabanas/RegistrosEntrada/Salida";
@@ -144,13 +144,13 @@ fetch(RegistroSalida, {
   cache:"no-cache",
   body: JSON.stringify(JSONSalida)
 }).then(res => res.text())
-.then(res => console.log(res))
-.catch(err => console.log("Error"));
+.then(res => console.log(res))// 1 Muestre letrero Registrado exitosamente. 2. Redireccione al index 
+.catch(err => console.log("Error")); //Favor de verificar su id 
 }
 function IsImptyChechk(codigoemp){
-if(codigoemp == "")
+if(codigoemp == " ")
 {
-    //InnerHTML diciendo que debe escribir el codigo
+    //InnerHTML diciendo que debe escribir el codigo. Favor de escribir id Empleado 
 }
 return codigoemp;
 }

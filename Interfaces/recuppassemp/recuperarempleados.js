@@ -11,6 +11,7 @@ function CapturaDatos(e){
 let username = document.getElementById('usuarios').value;
 let contrasenas = document.getElementById('contra').value;
 let contrasenasNueva = document.getElementById('contraNueva').value;
+
 JSONcontrasen(username,contrasenas,contrasenasNueva);
 }
 
@@ -21,27 +22,12 @@ let JSONContrasena={
 contrasena: contrasenas,
 confirmar_contrasena: contrasenasNueva
 }
-
-const cookie = setCokkie("UserName", username);
-console.log(cookie);
-fetch(URLRecuperar, {
-    mode: "no-cors",
-    headers:{
-  "accept": "application/json",
-  "Content-Type":"application/json",
-  "Cookie" : cookie
-    },
-  method:"POST",
-  cache:"no-store",
-  credentials: "include",
-  body : JSON.stringify(JSONContrasena)
-
+fetch(URLRecuperar +"/" +username, {
+  mode:"cors",
+  headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, 
+  method: 'POST', 
+  body: JSON.stringify(JSONContrasena)
 }).then(res => (res.text())
 .then(res => (console.log(res))))
 .catch(error => (console.log(error)));
-}
-function setCokkie(name, value){
-var date = new Date();
-let cokkk = document.cookie = name + "=" + value; 
-return cokkk;
 }
