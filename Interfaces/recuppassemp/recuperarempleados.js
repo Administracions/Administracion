@@ -31,3 +31,8 @@ fetch(URLRecuperar +"/" +username, {
 .then(res => (console.log(res))))
 .catch(error => (console.log(error))); // SI RESPONDE MAL, DIGA UN LETRERO  "Usuario no encontrado, por favor intente de nuevo" igual con INNER HTML  
 }
+
+function regresarindex(){
+  window.location.assign("../primera/index.html");
+  return false
+  }

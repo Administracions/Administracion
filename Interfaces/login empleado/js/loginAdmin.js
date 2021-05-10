@@ -35,3 +35,8 @@ window.addEventListener('load', function(e){
     .catch(error => (console.log(error))) // INNER HTML  USUARIO O CONTRASEÑA INCORRECTOS. Document. INNERHTML 
     
     }
+    function regresarindex(){
+      window.location.assign("../primera/index.html");
+      return false
+      }
+    

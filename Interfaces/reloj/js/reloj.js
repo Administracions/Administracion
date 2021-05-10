@@ -1,7 +1,5 @@
  
-/*window.addEventListener('load', function(e){
- document.getElementById('RegistroEntrada').addEventListener('submit',  gettoday);
- });*/
+
  
 function gettoday(){
   

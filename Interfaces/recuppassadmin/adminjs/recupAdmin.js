@@ -7,7 +7,6 @@ window.addEventListener('load', function(e){
 
 function CapturaDatos(e){
    e.preventDefault();
-
 let username = document.getElementById('UserAdmin').value;
 let contrasenas = document.getElementById('PassAdmin').value;
 let contrasenasNueva = document.getElementById('PassAdminRe').value;
@@ -30,4 +29,10 @@ fetch(URLRecuperar +"/" +username, {
 }).then(res => (res.text())    // SI RESPONDE BIEN, DIGA UN LETRERO CON INNER HTML  "Contraseña restablecida con exito"
 .then(res => (console.log(res))))
 .catch(error => (console.log(error))); // SI RESPONDE MAL, DIGA UN LETRERO  "Usuario no encontrado, por favor intente de nuevo" igual con INNER HTML  
+}
+
+
+function regresarindex(){
+window.location.assign("../primera/index.html");
+return false
 }

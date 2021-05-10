@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../recuppassadmin/recuppassadmin.css/estilo.css">
         <link rel="stylesheet" href="../recuppassadmin/recuppassadmin.css/menu.css">
         <link rel="stylesheet" href="../recuppassadmin/recuppassadmin.css/master.css">
+        <script src="../recuppassadmin/adminjs/recupAdmin.js"></script>
         <title>Recuperar contraseña</title>
     </head>
     <body>
@@ -33,17 +34,19 @@
       <!-- USER INPUT -->
       <form id="FormularioAdmin">
       <label for="text">Usuario</label>
-      <input  id="UserAdmin"  type="text" name="usuario"placeholder="Usuario" required>
+      <input  id="UserAdmin"  type="text" name="usuario" placeholder="Usuario" required>
         <!-- PASSWORD INPUT -->
        <label for="passnew">Contraseña Nueva</label>
-        <input id="PassAdmin" type="password" name="passnew"placeholder="Nueva contraseña" required>
+        <input id="PassAdmin" type="password" name="passnew"  placeholder="Nueva contraseña" required>
         <!-- PASSWORD INPUT -->
         <label for="passconf">Confirme Contraseña</label>
         <input  id="PassAdminRe" type="password" name="passconfi" placeholder="Confirme contraseña" required>
           
         <input type="submit" value="Aceptar">
-        <input type="submit" value="Cancelar">
-      </form>
+        <input id="Cancelar" type="submit" value="Cancelar" onclick="regresarindex()">
+        </form>
+        
+     
     </div>   
     </body>
 </html>
